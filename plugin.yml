@@ -1,0 +1,36 @@
+name: MyMoney
+author: Dog2puppy
+api: [2.0.0, 3.0.0]
+version: 1.0
+main: Dog2puppy\MyMoney\Main # Note that after SRC Directory, include all sub folder directories to Main but do not include .php extension in plugin.yml and This main PluginPlugin IS JUST AN EXAMPLE
+
+command:
+mymoney:
+   description: Displays MyMoney version.
+   usage: /mymoney [reload]
+balence:
+   description: Displays the choosen players balence. If no player is specified, it defaults to the sender.
+   usage: /balence [player]
+givemoney:
+   description: Give a player some of your money. 
+   usage: /givemoney <player> <ammount>
+setmoney:
+   description: Set a players money.
+   usage: /setmoney <player> <ammount>
+takemoney:
+   description: Take some money from a player.
+   usage: /takemoney <player> <ammount>
+
+permissions:
+mymoney.command:
+default: true
+balence.command:
+default: true
+mymoney.sign:
+default: op
+givemoney.command:
+default: true
+setmoney.command:
+default: op
+takemoney.command:
+default: op
