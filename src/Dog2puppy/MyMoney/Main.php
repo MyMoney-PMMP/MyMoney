@@ -5,7 +5,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\block\SignEventChange;
 use pocketmine\utils\Config;
 
-class Main extends PluginBase implements Listener{
+class Dog2puppy\MyMoney\Main extends PluginBase implements Listener{
    public function onLoad(){
       $this->getLogger()->info("Loaded MyMoney.");
    }
@@ -22,5 +22,3 @@ class Main extends PluginBase implements Listener{
       $this->getLogger()->info("Disabled MyMoney.");
    }
 }
-
-?>
