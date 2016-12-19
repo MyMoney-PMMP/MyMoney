@@ -7,7 +7,7 @@ use pocketmine\utils\Config;
 
 namespace Dog2puppy\MyMoney;
 
-class Dog2puppy\MyMoney\Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener{
    public function onLoad(){
       $this->getLogger()->info("Loaded MyMoney.");
    }
