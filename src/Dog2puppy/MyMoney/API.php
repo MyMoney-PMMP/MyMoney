@@ -16,7 +16,7 @@ class API extends PluginBase{
       if(!$this->users->get($player) === null){
          $this->users->set($player, $this->users->get($player)+$ammount);
       }else{
-         $this->users->set($player, $ammount)
+         $this->users->set($player, $ammount);
       }
       return true;
    }
