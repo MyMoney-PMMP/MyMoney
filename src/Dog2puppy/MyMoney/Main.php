@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener {
    }
    
    public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
-      switch($cmd){
+      switch($cmd->getName()){
          case "givemoney":
             $API->addMoney($args[1], $args[2]);
             return true;
