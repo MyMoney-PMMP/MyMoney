@@ -13,7 +13,12 @@ class API extends PluginBase{
    }
    
    public function addMoney($player, $ammount) {
-      
+      if(!$this->users->get($player) === null){
+         $this->users->set($player, $this->users->get($player)+$ammount);
+      }else{
+         $this->users->set($player, $ammount)
+      }
+      return true;
    }
 
 }
