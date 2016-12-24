@@ -20,5 +20,19 @@ class API extends PluginBase{
       }
       return true;
    }
+   
+   public function setMoney($player, $ammount) {
+      $this->users->set($player, $ammount);
+      return true;
+   }
+   
+   public function takeMoney($player, $ammount) {
+      if (!$this->users->get($player)) {
+         if (!$this->users->get($player) < $ammount) {
+            $this->users->set($player, $this->users->get($player) - $ammount);
+            return true;
+         }
+      }
+   }
 
 }
