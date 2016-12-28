@@ -3,7 +3,7 @@ Namespace Dog2puppy\MyMoney\Tasks;
 use pocketmine\scheduler\PluginTask;
 use plugin\Main;
 
-class YourTask extends PluginTask {
+class SaveConfig extends PluginTask {
 
     public $plugin;
 
