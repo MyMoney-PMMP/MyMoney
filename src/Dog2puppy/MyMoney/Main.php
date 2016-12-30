@@ -34,32 +34,24 @@ class Main extends PluginBase implements Listener {
    
    public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
       switch(strtolower($cmd->getName())) {
-		  
-        case "givemoney":
-		
-			if(sender->hasPermission("perm")) {
-				if(isset($args[0])) {
-					$p = $args[0];
-					if(isset($args[1])) {
-						$a = $args{1];
-						
-						$API->addMoney($p, $a);
-							
+     	 case "givemoney":
+			if($sender->hasPermission("perm")) {
+			   if(isset($args[0])) {
+				$p = $args[0];
+				   if(isset($args[1])) {
+				      $a = $args[1];
+					 $API->addMoney($p, $a);
+					}else{
+					   $sender->sendMesssage("Invalid Amount!");
 					}
-					else {
-						$sender->sendMesssage("Invalid Amount!");
-					}
+				}else{
+				   $sender->sendMessage("/givemoney <name> <amt>");
 				}
-				else {
-					$sender->sendMessage("/givemoney <name> <amt>");
-				}
+			}else{
+			   $sender->sendMessage("You have no permission to use this command!");
 			}
-			else {
-				$sender->sendMessage("You have no permission to use this command!");
-			}
-			
             return true;
-		break;
+	 break;
 		
 		// add more
       }
