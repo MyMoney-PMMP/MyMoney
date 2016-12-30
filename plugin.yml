@@ -10,7 +10,7 @@ mymoney:
    usage: /mymoney [reload]
 balence:
    description: Displays the choosen players balence. If no player is specified, it defaults to the sender.
-   usage: /balence [player]
+   usage: /balance [player]
 givemoney:
    description: Give a player some of your money. 
    usage: /givemoney <player> <ammount>
@@ -24,7 +24,7 @@ takemoney:
 permissions:
 mymoney.command:
 default: true
-balence.command:
+balance.command:
 default: true
 mymoney.sign:
 default: op
