@@ -9,8 +9,21 @@ class API extends PluginBase{
    
    public function onEnable(){
       @mkdir($this->getDataFolder());
-      $this->users= new Conig($this->getDataFolder()."users.yml", Config::YAML, array());
+      $this->config= new Config($this->getDataFolder()."config.yml", Config::YAML, array());
+      $unique-files= $this->config->get("general")["unique-files"];
+      if ($unique-files == true) {
+         @mkdir($this->getDataFolder()."players");
+      }else{
+         $this->users= new Config($this->getDataFolder()."users.yml", Config::YAML, array());
+      }
    }
+   
+   public function getPlayer($player) {
+      if ($unique-files == true) {
+         return new Config($this->getDataFolder()."players/".$player.".yml", Config::YAML, array());
+      }else{
+         return $this->users;
+      }
    
    public function addMoney($player, $ammount) {
       if(!$this->users->get($player) === null){
