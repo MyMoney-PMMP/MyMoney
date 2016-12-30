@@ -10,6 +10,6 @@
 # Copyright (c) 2016 Dog2puppy
 
 general:
- - unique-files: false # NOT FUNCTIONAL Should we make each user their own <username>.yml file to store their money in? true=yes false=no (Recommended) Default: false Note: If enabled usernames that are config, users, etc will not be able to use MyMoney. This is to prevent you from loosing your configs.
+ - unique-files: false # Should we make each user their own <username>.yml file to store their money in? true=yes false=no (Recommended) Default: false Note: If enabled usernames that are config, users, etc will not be able to use MyMoney. This is to prevent you from loosing your configs.
 tax: 
  - time: 600 # How often should we take tax from users?
