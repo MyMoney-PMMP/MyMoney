@@ -1,4 +1,6 @@
-Namespace Dog2puppy\MyMoney\Tasks;
+<?php
+
+namespace Dog2puppy\MyMoney\Tasks;
 
 use pocketmine\scheduler\PluginTask;
 use plugin\Main;
