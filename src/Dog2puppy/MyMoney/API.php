@@ -23,6 +23,7 @@ class API extends PluginBase{
       }else{
          return $this->users;
       }
+   }
    
    public function addMoney($player, $ammount) {
       if(!$this->getPlayer($player)->get($player) === null){
