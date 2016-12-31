@@ -25,6 +25,13 @@ class Main extends PluginBase implements Listener {
       $this->players = new Config ($this->getDataFolder() . "players.yml" , Config::YAML);
       $API= new API();
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
+		public function createTask() {
+			 $task = new Dog2puppy\MyMoney\Tasks\SaveConfig($this); // A class that extends pocketmine\scheduler\PluginTask
+			 // The Task handler
+			 $h = $this->getServer()->getScheduler()->scheduleRepeatingTask($task, 4800);
+			 // Set the task's handler
+			 $task->setHandler($h);
+		}
       $this->getLogger()->info("Enabled MyMoney.");
    }
    
