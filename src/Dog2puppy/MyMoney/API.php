@@ -10,7 +10,7 @@ class API extends PluginBase{
    public function onEnable(){
       @mkdir($this->getDataFolder());
       $this->config= new Config($this->getDataFolder()."config.yml", Config::YAML, array());
-      $unique-files= $this->config->get("general")["unique-files"];
+      $unique-files=$this->config->get("general")["unique-files"];
       if ($unique-files == true) {
          @mkdir($this->getDataFolder()."players");
       }else{
