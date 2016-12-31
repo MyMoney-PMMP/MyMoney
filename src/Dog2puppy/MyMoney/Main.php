@@ -51,8 +51,45 @@ class Main extends PluginBase implements Listener {
 			   $sender->sendMessage("You have no permission to use this command!");
 			}
             return true;
-	 break;
-		
+		 break;
+				
+		 case "setmoney":
+		    if($sender->hasPermission("mymoney.setmoney")) {
+				 if(isset($args[0])) {
+				$p = $args[0];
+				   if(isset($args[1])) {
+				      $a = $args[1];
+					 $API->setMoney($p, $a);
+					}else{
+					   $sender->sendMesssage("Invalid Amount!");
+					}
+				}else{
+				   $sender->sendMessage("/setmoney <name> <amt>");
+				}
+			}else{
+			   $sender->sendMessage("You have no permission to use this command!");
+			}
+            return true;
+		 break;
+				
+		case "takemoney":
+		    if($sender->hasPermission("mymoney.takemoney")) {
+				 if(isset($args[0])) {
+				$p = $args[0];
+				   if(isset($args[1])) {
+				      $a = $args[1];
+					 $API->takeMoney($p, $a);
+					}else{
+					   $sender->sendMesssage("Invalid Amount!");
+					}
+				}else{
+				   $sender->sendMessage("/takemoney <name> <amt>");
+				}
+			}else{
+			   $sender->sendMessage("You have no permission to use this command!");
+			}
+            return true;
+		 break;
 		// add more
       }
    }
