@@ -19,6 +19,7 @@ class SaveConfig extends PluginTask {
       }
 
       public function onRun() {
-         new pocketmine\utils\Config($this->getDataFolder()."users.yml", Config::YAML, array())->save();
+         $this->users= new pocketmine\utils\Config($this->getDataFolder()."users.yml", Config::YAML, array());
+			$this->users->save();
       }
 }
