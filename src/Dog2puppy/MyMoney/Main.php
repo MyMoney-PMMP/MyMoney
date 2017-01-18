@@ -100,11 +100,15 @@ class Main extends PluginBase implements Listener {
 		 break;
 		// add more
       }
-		public function onSignChange(SignChangeEvent $event){
-			$lines=$event-getLines();
-			if($lines[0]=="[ServerShop]"){
-				if(strpos("buy", $lines[1]) or strpos("sell", $lines[1])){
-					
+	}
+	public function onSignChange(SignChangeEvent $event){
+		$lines=$event-getLines();
+		if($lines[0]=="[ServerShop]"){
+			if(strpos("buy ", $lines[1]) or strpos("sell ", $lines[1])){
+				if(isset($lines[2])){
+					$event->setLine("$".$lines[2]);
+				}
+			}
 		}
    }
 }
