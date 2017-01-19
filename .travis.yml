@@ -23,7 +23,7 @@ before_script:
  - wget -O DevTools.phar https://jenkins.pmmp.io/job/PocketMine-MP%20DevTools/9/artifact/DevTools_v1.11.1-95929e1d.phar
  - cd /home/travis/build/MyMoney-PMMP/MyMoney/
  - cp -rf Travis.php PocketMine-MP/
- - cp -rf English/ PocketMine-MP/plugins/
+ - cp -rf / PocketMine-MP/plugins/
  - cd PocketMine-MP
 
 script:
