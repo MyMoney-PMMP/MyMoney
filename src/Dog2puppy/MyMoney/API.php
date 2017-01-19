@@ -17,9 +17,9 @@ class API extends PluginBase{
       }
    }
    
-   public function getPlayer($player) {
+   private function getPlayer($player) {
       if ($this->config->get("general")["unique-files"] == true) {
-         return new Config($this->getDataFolder()."players/".$player.".yml", Config::YAML, array());
+         return new Config($this->getDataFolder()."players/".strtolower($player).".yml", Config::YAML, array());
       }else{
          return $this->users;
       }
@@ -27,22 +27,22 @@ class API extends PluginBase{
    
    public function addMoney($player, $ammount) {
       if(!$this->getPlayer($player)->get($player) === null){
-         $this->getPlayer($player)->set($player, $this->getPlayer($player)->get($player)+$ammount);
+         $this->getPlayer($player)->set($player, $this->getPlayer($player)->get(strtolower($player))+$ammount);
       }else{
-         $this->getPlayer($player)->set($player, $ammount);
+         $this->getPlayer($player)->set(strtolower($player), $ammount);
       }
       return true;
    }
    
    public function setMoney($player, $ammount) {
-      $this->getPlayer($player)->set($player, $ammount);
+      $this->getPlayer($player)->set(strtolower($player), $ammount);
       return true;
    }
    
    public function takeMoney($player, $ammount) {
-      if (!$this->getPlayer($player)->get($player)) {
-         if (!$this->getPlayer($player)->get($player) < $ammount) {
-            $this->getPlayer($player)->set($player, $this->getMoney($player)->get($player) - $ammount);
+      if (!$this->getPlayer($player)->get(strtolower($player))) {
+         if (!$this->getPlayer($player)->get(strtolower($player)) < $ammount) {
+            $this->getPlayer($player)->set(strtolower($player), $this->getMoney($player)->get(strtolower($player)) - $ammount);
             return true;
          }
       }
