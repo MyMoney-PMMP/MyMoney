@@ -114,9 +114,9 @@ class Main extends PluginBase implements Listener
             if (strpos('buy ', $lines[1]) or strpos('sell ', $lines[1])) {
                 if (isset($lines[2])) {
                     $event->setLine('$'.$lines[2]);
-						 if($lines[3] == $minecraftItem){
-							 $event->getPlayer->sendMessage("Created a server shop!");
-						 }
+                    if ($lines[3] == $minecraftItem) {
+                        $event->getPlayer->sendMessage('Created a server shop!');
+                    }
                 }
             }
         }
