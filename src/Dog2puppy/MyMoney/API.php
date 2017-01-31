@@ -27,29 +27,29 @@ class API extends PluginBase
         }
     }
 
-    public function addMoney($player, $ammount)
+    public function addMoney($player, $amount)
     {
         if (!$this->getPlayer($player)->get($player) === null) {
-            $this->getPlayer($player)->set($player, $this->getPlayer($player)->get(strtolower($player)) + $ammount);
+            $this->getPlayer($player)->set($player, $this->getPlayer($player)->get(strtolower($player)) + $amount);
         } else {
-            $this->getPlayer($player)->set(strtolower($player), $ammount);
+            $this->getPlayer($player)->set(strtolower($player), $amount);
         }
 
         return true;
     }
 
-    public function setMoney($player, $ammount)
+    public function setMoney($player, $amount)
     {
-        $this->getPlayer($player)->set(strtolower($player), $ammount);
+        $this->getPlayer($player)->set(strtolower($player), $amount);
 
         return true;
     }
 
-    public function takeMoney($player, $ammount)
+    public function takeMoney($player, $amount)
     {
         if (!$this->getPlayer($player)->get(strtolower($player))) {
-            if (!$this->getPlayer($player)->get(strtolower($player)) < $ammount) {
-                $this->getPlayer($player)->set(strtolower($player), $this->getMoney($player)->get(strtolower($player)) - $ammount);
+            if (!$this->getPlayer($player)->get(strtolower($player)) < $amount) {
+                $this->getPlayer($player)->set(strtolower($player), $this->getMoney($player)->get(strtolower($player)) - $amount);
 
                 return true;
             }
