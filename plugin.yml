@@ -13,13 +13,13 @@ balence:
    usage: /balance [player]
 givemoney:
    description: Give a player some of your money. 
-   usage: /givemoney <player> <ammount>
+   usage: /givemoney <player> <amount>
 setmoney:
    description: Set a players money.
-   usage: /setmoney <player> <ammount>
+   usage: /setmoney <player> <amount>
 takemoney:
    description: Take some money from a player.
-   usage: /takemoney <player> <ammount>
+   usage: /takemoney <player> <amount>
 
 permissions:
 mymoney.command:
