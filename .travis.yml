@@ -24,6 +24,7 @@ before_script:
  - cd /home/travis/build/MyMoney-PMMP/
  - cp -rf Travis.php PocketMine-MP/
  - cp -rf MyMoney/ PocketMine-MP/plugins/
+ - cd MyMoney
  - cd PocketMine-MP
 
 script:
