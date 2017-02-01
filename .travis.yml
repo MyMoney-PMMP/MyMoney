@@ -21,9 +21,9 @@ before_script:
  - mkdir plugins
  - cd plugins
  - wget -O DevTools.phar https://poggit.pmmp.io/r/1104/PocketMine-DevTools.phar
- - cd /home/travis/build/MyMoney-PMMP/MyMoney/
+ - cd /home/travis/build/MyMoney-PMMP/
  - cp -rf Travis.php PocketMine-MP/
- - cp -rf / PocketMine-MP/plugins/
+ - cp -rf MyMoney/ PocketMine-MP/plugins/
  - cd PocketMine-MP
 
 script:
