@@ -13,7 +13,7 @@ branches:
  - master
 
 before_script:
-- cd ..
+ - cd ..
  - git clone --recursive --branch=master https://github.com/pmmp/PocketMine-MP.git
  - pecl install channel://pecl.php.net/pthreads-3.1.6
  - pecl install channel://pecl.php.net/weakref-0.3.3
