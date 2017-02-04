@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * MyMoney is licensed under the BoxOfDevs license 1.1.2
+ *
+ * By using MyMoney you automatically agree to the license.
+ */
+
 $server = proc_open(PHP_BINARY.' src/pocketmine/PocketMine.php --no-wizard --disable-readline', [
     0 => ['pipe', 'r'],
     1 => ['pipe', 'w'],

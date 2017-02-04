@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * MyMoney is licensed under the BoxOfDevs license 1.1.2
+ *
+ * By using MyMoney you automatically agree to the license.
+ */
+
 namespace Dog2puppy\MyMoney;
 
 use pocketmine\plugin\PluginBase;
