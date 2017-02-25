@@ -1,8 +1,8 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Dog2puppy/MyMoney
-icon: MyMoney Logo.png
 branches:
 - master
 projects:
   MyMoney:
     path: ""
+    icon: MyMoney Logo.png
 ...
