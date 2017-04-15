@@ -28,7 +28,7 @@ before_script:
  - cd PocketMine-MP
 
 script:
- - php Travis.php
+ - php .travis.php
  
 notifications:
  email: false
